@@ -8,7 +8,7 @@ fun View.hide() = run { this.visibility = View.GONE }
 
 fun View.invisible() = run { this.visibility = View.INVISIBLE }
 
-fun View.showFade(duration: Long) {
+fun View.showFade(duration: Long = 700L) {
     this.show()
     this.alpha = 0f
     this.animate().setDuration(duration).alpha(1f)
