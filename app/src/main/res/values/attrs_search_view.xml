@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SearchBarView">
+        <attr name="is_enabled_search" format="boolean" />
+    </declare-styleable>
+</resources>

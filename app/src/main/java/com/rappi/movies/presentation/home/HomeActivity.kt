@@ -3,44 +3,31 @@ package com.rappi.movies.presentation.home
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-
 import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.shape.CornerFamily
-import com.google.android.material.shape.MaterialShapeDrawable
 import com.rappi.movies.R
+import com.rappi.movies.presentation.home.home.HomeFragment
+import com.rappi.movies.presentation.util.backgroundRoundedCorners
+import kotlinx.android.synthetic.main.activity_home.*
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity(), HomeFragment.HomeListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        val navView: BottomNavigationView = findViewById(R.id.nav_view)
+        setBottomNavigation()
+    }
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+    private fun setBottomNavigation() {
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
         val navController = navHostFragment.navController
+        bottomNavigation.backgroundRoundedCorners(R.dimen.cornerSize)
+        bottomNavigation.setupWithNavController(navController)
+    }
 
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-//        val appBarConfiguration = AppBarConfiguration(
-//            setOf(
-//                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
-//            )
-//        )
-//        setupActionBarWithNavController(navController)
-
-        val radius = resources.getDimension(R.dimen.cornerSize)
-
-        val shapeDrawable : MaterialShapeDrawable = navView.background as MaterialShapeDrawable
-        shapeDrawable.shapeAppearanceModel = shapeDrawable.shapeAppearanceModel
-            .toBuilder()
-            .setAllCorners(CornerFamily.ROUNDED, radius)
-            .build()
-
-        navView.setupWithNavController(navController)
+    override fun goToSearch() {
+        bottomNavigation.selectedItemId = R.id.navigation_search
     }
 
     companion object {
