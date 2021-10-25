@@ -38,6 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
         android:text="@string/splash_for"
+        android:fontFamily="@font/quicksand_regular"
         android:textColor="@android:color/white"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@id/ivRappi"

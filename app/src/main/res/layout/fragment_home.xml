@@ -53,7 +53,7 @@
             app:tabMaxWidth="0dp"
             app:tabMode="fixed"
             app:tabSelectedTextColor="@android:color/white"
-            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            app:tabTextAppearance="@style/Theme.TabLayoutText"
             app:tabTextColor="?attr/colorPrimary" />
 
     </com.google.android.material.card.MaterialCardView>
