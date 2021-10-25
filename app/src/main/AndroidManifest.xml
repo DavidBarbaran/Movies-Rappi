@@ -13,8 +13,8 @@
 
         <activity
             android:name=".presentation.splash.SplashActivity"
-            android:theme="@style/Theme.MoviesRappiDark"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MoviesRappiDark">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +24,7 @@
 
         <activity
             android:name=".presentation.home.HomeActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
     </application>
 </manifest>

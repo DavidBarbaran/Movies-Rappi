@@ -4,11 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.rappi.movies.R
+import com.rappi.movies.presentation.home.movies.MoviesAdapter
+import kotlinx.android.synthetic.main.fragment_search.*
 
 class SearchFragment : Fragment() {
 
@@ -26,5 +28,27 @@ class SearchFragment : Fragment() {
 
         })
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setRecyclerView()
+        setOnClick()
+        searchView.showKeyboard()
+    }
+
+    private fun setOnClick() {
+        btnBack.setOnClickListener {
+            searchView.hideKeyboard()
+            findNavController().navigateUp()
+        }
+        searchView.onActionSearch {
+
+        }
+    }
+
+    private fun setRecyclerView() {
+        val adapter = MoviesAdapter()
+        rvMovies.adapter = adapter
     }
 }

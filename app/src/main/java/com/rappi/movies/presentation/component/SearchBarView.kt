@@ -4,8 +4,11 @@ import android.content.Context
 import android.util.AttributeSet
 import android.util.Log
 import android.view.View
+import android.view.inputmethod.EditorInfo
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.rappi.movies.R
+import com.rappi.movies.presentation.util.hideKeyboard
+import com.rappi.movies.presentation.util.showKeyboard
 import kotlinx.android.synthetic.main.search_view.view.*
 
 class SearchBarView @JvmOverloads constructor(
@@ -45,5 +48,27 @@ class SearchBarView @JvmOverloads constructor(
         super.setOnClickListener(l)
         btnSearch?.setOnClickListener(l)
         etSearch?.setOnClickListener(l)
+    }
+
+    fun onActionSearch(performSearch: () -> Unit) {
+        etSearch.setOnEditorActionListener { _, actionId, _ ->
+            when(actionId) {
+                EditorInfo.IME_ACTION_SEARCH -> {
+                    performSearch.invoke()
+                    true
+                }
+                else -> false
+            }
+        }
+    }
+
+    fun showKeyboard() {
+        etSearch.requestFocus()
+        showKeyboard(context)
+    }
+
+    fun hideKeyboard() {
+        etSearch.clearFocus()
+        etSearch.hideKeyboard(context)
     }
 }
