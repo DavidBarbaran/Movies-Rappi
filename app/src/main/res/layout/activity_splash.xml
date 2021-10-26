@@ -36,7 +36,7 @@
         android:id="@+id/tvFor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
+        android:layout_marginEnd="@dimen/dp4"
         android:text="@string/splash_for"
         android:fontFamily="@font/quicksand_regular"
         android:textColor="@android:color/white"
@@ -50,7 +50,7 @@
 
     <ImageView
         android:id="@+id/ivRappi"
-        android:layout_width="60dp"
+        android:layout_width="@dimen/size60"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:src="@drawable/ic_rappi"
