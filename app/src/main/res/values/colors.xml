@@ -9,5 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="gray">#F7F8F9</color>
+    <color name="gray10">#DFDFDF</color>
+    <color name="black_opacity">#59000000</color>
 
 </resources>

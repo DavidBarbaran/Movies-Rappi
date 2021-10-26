@@ -8,4 +8,7 @@
     <string name="search_view_search">Buscar…</string>
     <string name="home_popular">Popular</string>
     <string name="home_top_rated">Top Rated</string>
+    <string name="detail_movie_sinopsis">Sinopsis</string>
+    <string name="detail_movie_release">Estreno:</string>
+    <string name="detail_movie_watch_movie">Ver película</string>
 </resources>

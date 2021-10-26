@@ -1,6 +1,6 @@
 package com.rappi.movies.domain.movie
 
-import com.rappi.movies.presentation.home.movies.MovieModel
+import com.rappi.movies.presentation.feature.home.movies.MovieModel
 
 class MovieModelMapper {
 

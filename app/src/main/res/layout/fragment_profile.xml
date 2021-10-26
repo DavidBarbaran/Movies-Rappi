@@ -8,7 +8,7 @@
     android:background="@color/white"
     android:focusableInTouchMode="true"
     android:layout_height="match_parent"
-    tools:context=".presentation.home.profile.ProfileFragment">
+    tools:context=".presentation.feature.home.profile.ProfileFragment">
 
     <TextView
         android:id="@+id/text_notifications"

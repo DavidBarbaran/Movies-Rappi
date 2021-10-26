@@ -8,7 +8,7 @@
     android:clickable="true"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    tools:context=".presentation.home.home.HomeFragment">
+    tools:context=".presentation.feature.home.home.HomeFragment">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
