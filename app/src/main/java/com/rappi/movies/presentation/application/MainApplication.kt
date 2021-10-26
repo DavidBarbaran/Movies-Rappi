@@ -1,7 +1,9 @@
 package com.rappi.movies.presentation.application
 
 import android.app.Application
-import com.rappi.movies.presentation.navigator.di.navigatorModule
+import com.rappi.movies.data.di.dataModule
+import com.rappi.movies.domain.di.domainModule
+import com.rappi.movies.presentation.di.presentationModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -17,7 +19,7 @@ class MainApplication : Application() {
         startKoin {
             androidLogger()
             androidContext(this@MainApplication)
-            modules(navigatorModule)
+            modules(listOf(dataModule, domainModule, presentationModule))
         }
     }
 }

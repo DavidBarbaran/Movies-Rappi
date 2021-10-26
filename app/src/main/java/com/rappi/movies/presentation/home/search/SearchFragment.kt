@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import com.rappi.movies.R
 import com.rappi.movies.presentation.home.movies.MoviesAdapter
 import kotlinx.android.synthetic.main.fragment_search.*
@@ -40,7 +39,6 @@ class SearchFragment : Fragment() {
     private fun setOnClick() {
         btnBack.setOnClickListener {
             searchView.hideKeyboard()
-            findNavController().navigateUp()
         }
         searchView.onActionSearch {
 
@@ -50,5 +48,9 @@ class SearchFragment : Fragment() {
     private fun setRecyclerView() {
         val adapter = MoviesAdapter()
         rvMovies.adapter = adapter
+    }
+
+    companion object {
+        fun newInstance() = SearchFragment()
     }
 }

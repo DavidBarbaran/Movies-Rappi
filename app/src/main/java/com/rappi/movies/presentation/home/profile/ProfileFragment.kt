@@ -28,4 +28,8 @@ class ProfileFragment : Fragment() {
         })
         return root
     }
+
+    companion object {
+        fun newInstance() = ProfileFragment()
+    }
 }
