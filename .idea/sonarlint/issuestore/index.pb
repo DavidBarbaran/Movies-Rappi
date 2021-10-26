@@ -66,8 +66,6 @@ x
 Happ/src/main/java/com/rappi/movies/presentation/util/RecyclerViewUtil.kt,3/7/371e6095ccdcb962019813f7d714aea052134155
 q
 Aapp/src/main/java/com/rappi/movies/presentation/util/ToastUtil.kt,0/a/0a9245d32c2ab5ba7be467bef4c089f71f7fd7e7
-ˆ
-Xapp/src/main/java/com/rappi/movies/presentation/feature/home/profile/ProfileViewModel.kt,f/c/fc75bf7fa3a2b3eaa4876c28c1e578bd23cf7022
 ‡
 Wapp/src/main/java/com/rappi/movies/presentation/feature/home/profile/ProfileFragment.kt,b/a/ba6a0c57222a8afc9fa1981f3a8611e2e7a06c73
 €
@@ -130,3 +128,15 @@ Sapp/src/main/java/com/rappi/movies/presentation/feature/video/PlayMovieViewMode
 Rapp/src/main/java/com/rappi/movies/presentation/feature/video/PlayMovieActivity.kt,2/0/2074ff47a0b1060609fcbfc389384897466d4179
 …
 Uapp/src/main/java/com/rappi/movies/presentation/util/YouTubePlayerSupportFragmentX.kt,c/7/c7ed533652b65b2913a7b6415f40c268c80c48fc
+†
+Vapp/src/main/java/com/google/android/youtube/player/YouTubePlayerSupportFragmentX.java,2/2/22016a2f1d23ed9ba2d14de62b6b05168d9b342b
+?
+settings.gradle,0/5/05efc8b1657769a27696d478ded1e95f38737233
+A
+gradle.properties,2/a/2afbb999f001938c88fa43fc2ef52abf0f8213e4
+e
+5app/src/test/java/com/rappi/movies/ExampleUnitTest.kt,2/3/2397896a771e37235f5c503297eecf8a181d048f
+f
+6app/src/test/java/com/rappi/movies/HomeActivityTest.kt,9/4/9473f831cb057e00c1e08336136c74ea7a204f41
+t
+Dapp/src/androidTest/java/com/rappi/movies/ExampleInstrumentedTest.kt,8/0/80be34341ee9c34e0153c9c32231091be43b192e
