@@ -11,4 +11,5 @@
     <string name="detail_movie_sinopsis">Sinopsis</string>
     <string name="detail_movie_release">Estreno:</string>
     <string name="detail_movie_watch_movie">Ver película</string>
+    <string name="play_movie_error">Ocurrió un error al reproducir la película</string>
 </resources>

@@ -7,10 +7,13 @@ import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.rappi.movies.R
 import com.rappi.movies.presentation.feature.home.movies.MovieModel
+import com.rappi.movies.presentation.navigator.NavigatorImpl
 import kotlinx.android.synthetic.main.activity_detail_movie.*
+import org.koin.android.ext.android.inject
 
 class DetailMovieActivity : AppCompatActivity() {
 
+    private val navigator: NavigatorImpl by inject()
     private var movie: MovieModel? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,10 +40,10 @@ class DetailMovieActivity : AppCompatActivity() {
             onBackPressed()
         }
         ivPlay.setOnClickListener {
-
+            movie?.let { m -> navigator.goToPlayMovie(m) }
         }
         btnWatchMovie.setOnClickListener {
-
+            movie?.let { m -> navigator.goToPlayMovie(m) }
         }
     }
 

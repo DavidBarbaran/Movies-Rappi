@@ -6,4 +6,5 @@ interface Navigator {
 
     fun goToHome()
     fun goToDetailMovie(movie: MovieModel)
+    fun goToPlayMovie(movie: MovieModel)
 }

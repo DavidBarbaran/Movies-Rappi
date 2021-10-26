@@ -4,6 +4,7 @@ import android.content.Context
 import com.rappi.movies.presentation.feature.detail.DetailMovieActivity
 import com.rappi.movies.presentation.feature.home.HomeActivity
 import com.rappi.movies.presentation.feature.home.movies.MovieModel
+import com.rappi.movies.presentation.feature.play.PlayMovieActivity
 
 class NavigatorImpl(private val context: Context) : Navigator {
 
@@ -13,5 +14,9 @@ class NavigatorImpl(private val context: Context) : Navigator {
 
     override fun goToDetailMovie(movie: MovieModel) {
         context.startActivity(DetailMovieActivity.getCallingIntent(context, movie))
+    }
+
+    override fun goToPlayMovie(movie: MovieModel) {
+        context.startActivity(PlayMovieActivity.getCallingIntent(context, movie))
     }
 }
