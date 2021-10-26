@@ -13,6 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MoviesRappi">
+
         <activity
             android:name=".presentation.feature.splash.SplashActivity"
             android:screenOrientation="portrait"
@@ -34,7 +35,12 @@
         <activity
             android:name=".presentation.feature.video.PlayMovieActivity"
             android:screenOrientation="landscape"
-            android:theme="@style/Theme.FullScreen" />
-    </application>
+            android:theme="@style/Theme.FullScreen"/>
 
+    </application>
+    <queries>
+        <intent>
+            <action android:name="com.google.android.youtube.api.service.START" />
+        </intent>
+    </queries>
 </manifest>

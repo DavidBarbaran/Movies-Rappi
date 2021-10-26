@@ -140,3 +140,9 @@ f
 6app/src/test/java/com/rappi/movies/HomeActivityTest.kt,9/4/9473f831cb057e00c1e08336136c74ea7a204f41
 t
 Dapp/src/androidTest/java/com/rappi/movies/ExampleInstrumentedTest.kt,8/0/80be34341ee9c34e0153c9c32231091be43b192e
+m
+=app/src/test/java/com/rappi/movies/DetailMovieActivityTest.kt,d/5/d594446a7595e6065975243493a3d016271231e5
+@
+local.properties,0/7/0712df971a99ac4d2fccb8e0fb19f377f3374cca
+F
+app/proguard-rules.pro,9/e/9e08934d811afe28fbc77aaa3c0d747b94348db9
