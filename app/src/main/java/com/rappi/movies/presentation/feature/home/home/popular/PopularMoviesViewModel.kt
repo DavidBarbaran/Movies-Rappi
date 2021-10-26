@@ -38,6 +38,7 @@ class PopularMoviesViewModel(
                     launch(Dispatchers.Main) {
                         val message = it.message.orEmpty()
                         _uiState.value = PopularMoviesUiState.Error(message)
+                        _uiState.value =  PopularMoviesUiState.NotLoading
                     }
                     loading = false
                 }

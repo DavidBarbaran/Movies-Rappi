@@ -31,7 +31,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Translucent" />
         <activity
-            android:name=".presentation.feature.play.PlayMovieActivity"
+            android:name=".presentation.feature.video.PlayMovieActivity"
             android:screenOrientation="landscape"
             android:theme="@style/Theme.FullScreen" />
     </application>

@@ -4,7 +4,7 @@ import android.content.Context
 import com.rappi.movies.presentation.feature.detail.DetailMovieActivity
 import com.rappi.movies.presentation.feature.home.HomeActivity
 import com.rappi.movies.presentation.feature.home.movies.MovieModel
-import com.rappi.movies.presentation.feature.play.PlayMovieActivity
+import com.rappi.movies.presentation.feature.video.PlayMovieActivity
 
 class NavigatorImpl(private val context: Context) : Navigator {
 

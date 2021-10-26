@@ -4,12 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.feature.play.PlayMovieActivity">
+    tools:context=".presentation.feature.video.PlayMovieActivity">
 
-    <com.google.android.youtube.player.YouTubePlayerView
-        android:id="@+id/ypView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+    <fragment
+        android:id="@+id/youtubePlayerFragment"
+        android:name="com.google.android.youtube.player.YouTubePlayerSupportFragmentX"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="FragmentTagUsage" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

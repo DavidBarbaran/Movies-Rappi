@@ -9,11 +9,15 @@ import com.rappi.movies.domain.movie.search.SearchMoviesInteractor
 import com.rappi.movies.domain.movie.search.SearchMoviesUseCase
 import com.rappi.movies.domain.movie.top.rated.GetTopRatedMoviesInteractor
 import com.rappi.movies.domain.movie.top.rated.GetTopRatedMoviesUseCase
+import com.rappi.movies.domain.movie.video.GetVideoOfMovieInteractor
+import com.rappi.movies.domain.movie.video.GetVideoOfMovieUseCase
+import com.rappi.movies.domain.movie.video.VideoModelMapper
 import org.koin.dsl.module
 
 val domainModule = module {
     factory<MovieRepository> {
         MovieRepositoryImpl(
+            get(),
             get(),
             get()
         )
@@ -22,4 +26,6 @@ val domainModule = module {
     factory<GetTopRatedMoviesUseCase> { GetTopRatedMoviesInteractor(get()) }
     factory<SearchMoviesUseCase> { SearchMoviesInteractor(get()) }
     factory { MovieModelMapper() }
+    factory<GetVideoOfMovieUseCase> { GetVideoOfMovieInteractor(get()) }
+    factory { VideoModelMapper() }
 }

@@ -5,6 +5,7 @@ import com.rappi.movies.BuildConfig
 import com.rappi.movies.data.api.RestApi
 import com.rappi.movies.data.api.RetrofitConfig
 import com.rappi.movies.data.movie.MovieMapper
+import com.rappi.movies.data.movie.video.VideoMapper
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -24,4 +25,5 @@ val dataModule = module {
     }
 
     factory { MovieMapper() }
+    factory { VideoMapper() }
 }

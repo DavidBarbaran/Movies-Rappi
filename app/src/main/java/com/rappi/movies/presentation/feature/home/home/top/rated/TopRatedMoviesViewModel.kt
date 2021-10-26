@@ -38,6 +38,7 @@ class TopRatedMoviesViewModel(
                     launch(Dispatchers.Main) {
                         val message = it.message.orEmpty()
                         _uiState.value = TopRatedMoviesUiState.Error(message)
+                        _uiState.value = TopRatedMoviesUiState.NotLoading
                     }
                     loading = false
                 }

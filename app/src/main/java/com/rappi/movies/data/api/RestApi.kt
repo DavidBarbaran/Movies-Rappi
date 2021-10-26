@@ -2,8 +2,10 @@ package com.rappi.movies.data.api
 
 import com.rappi.movies.data.base.BaseResponse
 import com.rappi.movies.data.movie.MovieResponse
+import com.rappi.movies.data.movie.video.VideoResponse
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface RestApi {
@@ -16,4 +18,7 @@ interface RestApi {
 
     @GET("search/movie")
     suspend fun searchMovies(@Query("query") query: String, @Query("page") page: Int): Response<BaseResponse<MovieResponse>>
+
+    @GET("movie/{movieId}/videos")
+    suspend fun getVideosMovie(@Path("movieId") movieId: Int): Response<VideoResponse>
 }

@@ -4,6 +4,7 @@ import com.rappi.movies.presentation.feature.home.home.popular.PopularMoviesView
 import com.rappi.movies.presentation.feature.home.home.top.rated.TopRatedMoviesViewModel
 import com.rappi.movies.presentation.feature.home.movies.MoviesAdapter
 import com.rappi.movies.presentation.feature.home.search.SearchMoviesViewModel
+import com.rappi.movies.presentation.feature.video.PlayMovieViewModel
 import com.rappi.movies.presentation.navigator.Navigator
 import com.rappi.movies.presentation.navigator.NavigatorImpl
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -17,6 +18,7 @@ val presentationModule = module {
     viewModel { PopularMoviesViewModel(get(), get()) }
     viewModel { TopRatedMoviesViewModel(get(), get()) }
     viewModel { SearchMoviesViewModel(get(), get()) }
+    viewModel { PlayMovieViewModel(get(), get()) }
 
     factory { MoviesAdapter() }
 }
