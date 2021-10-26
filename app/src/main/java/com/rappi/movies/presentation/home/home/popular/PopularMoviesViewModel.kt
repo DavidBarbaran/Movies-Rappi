@@ -20,16 +20,12 @@ class PopularMoviesViewModel(
     var page = 1
     private var loading = false
 
-//    init {
-//        getPopularMovies()
-//    }
-
     fun getPopularMovies() {
         if (!loading) {
             loading = true
 
             viewModelScope.launch(Dispatchers.IO) {
-                launch(Dispatchers.Main) {  _uiState.value = PopularMoviesUiState.Loading }
+                launch(Dispatchers.Main) { _uiState.value = PopularMoviesUiState.Loading }
                 runCatching {
                     val movies = getPopularMoviesUseCase.getPopularMovies(page)
                     launch(Dispatchers.Main) {

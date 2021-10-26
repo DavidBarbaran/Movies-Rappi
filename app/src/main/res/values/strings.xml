@@ -6,4 +6,6 @@
     <string name="title_search">Buscar</string>
     <string name="title_profile">Perfil</string>
     <string name="search_view_search">Buscar…</string>
+    <string name="home_popular">Popular</string>
+    <string name="home_top_rated">Top Rated</string>
 </resources>

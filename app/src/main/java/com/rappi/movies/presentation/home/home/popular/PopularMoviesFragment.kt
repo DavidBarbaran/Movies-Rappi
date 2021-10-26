@@ -1,7 +1,6 @@
 package com.rappi.movies.presentation.home.home.popular
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -39,7 +38,6 @@ class PopularMoviesFragment : Fragment() {
     private fun setRecycler() {
         adapter.clear()
         rvMovies.adapter = adapter
-
         rvMovies.onEndless {
             viewModel.getPopularMovies()
         }
@@ -52,9 +50,7 @@ class PopularMoviesFragment : Fragment() {
                 when(it) {
                     PopularMoviesUiState.Loading -> progressBar.show()
                     PopularMoviesUiState.NotLoading -> progressBar.hide()
-                    is PopularMoviesUiState.Success -> {
-                        Log.e("Success_STATE", "_ ${it.movies.size}")
-                        adapter.addMovies(it.movies) }
+                    is PopularMoviesUiState.Success -> { adapter.addMovies(it.movies) }
                     is PopularMoviesUiState.Error -> { context?.showToast(it.message) }
                 }
             }

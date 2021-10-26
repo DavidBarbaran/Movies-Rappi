@@ -10,7 +10,7 @@ class MovieRepositoryImpl(
     private val movieMapper: MovieMapper
 ) : MovieRepository {
 
-    override suspend fun getPopularMovies(page: Int) : List<Movie> {
+    override suspend fun getPopularMovies(page: Int): List<Movie> {
         val response = restApi.getPopularMovies(page)
         if (response.isSuccessful) {
             return movieMapper.parse(response.body()?.results)
@@ -21,6 +21,15 @@ class MovieRepositoryImpl(
 
     override suspend fun getTopRatedMovies(page: Int): List<Movie> {
         val response = restApi.getTopRatedMovies(page)
+        if (response.isSuccessful) {
+            return movieMapper.parse(response.body()?.results)
+        } else {
+            throw getExceptionByCode(response.code())
+        }
+    }
+
+    override suspend fun searchMovies(query: String, page: Int): List<Movie> {
+        val response = restApi.searchMovies(query, page)
         if (response.isSuccessful) {
             return movieMapper.parse(response.body()?.results)
         } else {

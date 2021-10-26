@@ -7,17 +7,17 @@ import androidx.appcompat.app.AppCompatActivity
 import com.rappi.movies.R
 import com.rappi.movies.presentation.home.home.HomeFragment
 import com.rappi.movies.presentation.home.profile.ProfileFragment
-import com.rappi.movies.presentation.home.search.SearchFragment
+import com.rappi.movies.presentation.home.search.SearchMoviesFragment
 import com.rappi.movies.presentation.util.backgroundRoundedCorners
 import kotlinx.android.synthetic.main.activity_home.*
 
-class HomeActivity : AppCompatActivity(), HomeFragment.HomeListener {
+class HomeActivity : AppCompatActivity(), HomeListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         setBottomNavigation()
-        goToHomeFragment()
+        commitHomeFragment()
     }
 
     private fun setBottomNavigation() {
@@ -26,15 +26,15 @@ class HomeActivity : AppCompatActivity(), HomeFragment.HomeListener {
         bottomNavigation.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.navigation_home -> {
-                    goToHomeFragment()
+                    commitHomeFragment()
                     true
                 }
                 R.id.navigation_search -> {
-                    goToSearchFragment()
+                    commitSearchFragment()
                     true
                 }
                 R.id.navigation_profile -> {
-                    goToProfileFragment()
+                    commitProfileFragment()
                     true
                 }
                 else -> false
@@ -43,19 +43,19 @@ class HomeActivity : AppCompatActivity(), HomeFragment.HomeListener {
 
     }
 
-    private fun goToHomeFragment() {
+    private fun commitHomeFragment() {
         HomeFragment.newInstance().let {
             supportFragmentManager.beginTransaction().replace(R.id.navHostFragment, it).commit()
         }
     }
 
-    private fun goToSearchFragment() {
-        SearchFragment.newInstance().let {
+    private fun commitSearchFragment() {
+        SearchMoviesFragment.newInstance().let {
             supportFragmentManager.beginTransaction().replace(R.id.navHostFragment, it).commit()
         }
     }
 
-    private fun goToProfileFragment() {
+    private fun commitProfileFragment() {
         ProfileFragment.newInstance().let {
             supportFragmentManager.beginTransaction().replace(R.id.navHostFragment, it).commit()
         }
@@ -63,6 +63,18 @@ class HomeActivity : AppCompatActivity(), HomeFragment.HomeListener {
 
     override fun goToSearch() {
         bottomNavigation.selectedItemId = R.id.navigation_search
+    }
+
+    override fun goToHome() {
+        bottomNavigation.selectedItemId = R.id.navigation_home
+    }
+
+    override fun onBackPressed() {
+        if (bottomNavigation.selectedItemId == R.id.navigation_home) {
+            super.onBackPressed()
+        } else {
+            bottomNavigation.selectedItemId = R.id.navigation_home
+        }
     }
 
     companion object {

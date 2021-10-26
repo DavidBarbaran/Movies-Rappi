@@ -33,7 +33,9 @@ object RetrofitConfig {
         return object : Interceptor {
             override fun intercept(chain: Interceptor.Chain): Response {
                 var request = chain.request()
-                val url = request.url.newBuilder().addQueryParameter("api_key", BuildConfig.API_KEY)
+                val url = request.url.newBuilder()
+                    .addQueryParameter("api_key", BuildConfig.API_KEY)
+                    .addQueryParameter("language", "es-PE")
                     .build()
                 request = request.newBuilder().url(url).build()
                 return chain.proceed(request)

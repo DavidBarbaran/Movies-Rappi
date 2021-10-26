@@ -30,7 +30,7 @@ class TopRatedMoviesViewModel(
                     val movies = getTopRatedMoviesUseCase.getTopRatedMovies(page)
                     launch(Dispatchers.Main) {
                         _uiState.value = TopRatedMoviesUiState.Success(movieModelMapper.parse(movies))
-                        _uiState.value =  TopRatedMoviesUiState.NotLoading
+                        _uiState.value = TopRatedMoviesUiState.NotLoading
                     }
                     page++
                     loading = false

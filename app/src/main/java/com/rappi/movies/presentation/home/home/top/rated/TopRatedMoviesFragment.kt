@@ -15,7 +15,6 @@ import com.rappi.movies.presentation.util.showToast
 import kotlinx.android.synthetic.main.fragment_popular_movies.*
 import kotlinx.android.synthetic.main.fragment_top_rated_movies.rvMovies
 import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 
 class TopRatedMoviesFragment : Fragment() {
@@ -47,7 +46,7 @@ class TopRatedMoviesFragment : Fragment() {
 
     private fun setViewModel() {
         viewModel.page = 1
-        lifecycleScope.launch {
+        lifecycleScope.launchWhenCreated {
             viewModel.uiState.collect {
                 when(it) {
                     TopRatedMoviesUiState.Loading -> progressBar.show()
