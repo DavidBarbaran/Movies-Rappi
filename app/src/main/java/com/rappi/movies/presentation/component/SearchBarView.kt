@@ -71,4 +71,6 @@ class SearchBarView @JvmOverloads constructor(
         etSearch.clearFocus()
         etSearch.hideKeyboard(context)
     }
+
+    fun getText() = etSearch?.text.toString().trim()
 }
