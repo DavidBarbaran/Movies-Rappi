@@ -113,14 +113,13 @@ La capa de datos es la que se encarga de gestionar los datos locales y remotos d
 	- [Youtube Player](https://developers.google.com/youtube/android/player)
 
 - Arquitectura:
-	- [Data Binding](https://developer.android.com/topic/libraries/data-binding)
 	- [StateFlow](https://developer.android.com/kotlin/flow/stateflow-and-sharedflow)
 	- [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
 
 - Inyección de dependencia
 	- [Koin](https://github.com/InsertKoinIO/koin)
 
- - Net
+- Net
 	- [Retrofit](https://github.com/square/retrofit)
 	- [Glide](https://github.com/bumptech/glide)
 
