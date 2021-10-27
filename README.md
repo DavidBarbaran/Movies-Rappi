@@ -25,13 +25,13 @@ Aplicación demo de películas para evaluación técnica en Rappi.
 
 ## Requerimientos ✔️
 
-:white_check_mark: Películas y/o Series categorizadas por Popular y Top Rated.
+:white_check_mark: Películas categorizadas por Popular y Top Rated.
 
-:white_check_mark: Detalle de Película y/o Serie.
+:white_check_mark: Detalle de Películas.
 
-:white_check_mark: Buscador de Películas y/o Series por nombre.
+:white_check_mark: Buscador de Películas por nombre.
 
-:white_check_mark: Detalle de Película y/o Serie.
+:white_check_mark: Detalle de Película.
 
 :white_check_mark: Visualización de Videos en el detalle.
 
